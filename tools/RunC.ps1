@@ -1,0 +1,1 @@
+./cpp_inference/build/Debug/nnom_sample_c.exe

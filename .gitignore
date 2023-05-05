@@ -1,0 +1,11 @@
+**/.idea/**
+/build**
+.vscode/**
+/cmake-build-debug/**
+**/__pycache__/**
+/.shift_list
+workspace**
+
+/trained_model/**
+output.log
+/cpp_inference/cmake-build-debug**
