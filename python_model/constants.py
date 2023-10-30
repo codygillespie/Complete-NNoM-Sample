@@ -10,6 +10,9 @@ for directory in __directories:
     WORKSPACE_DIRECTORY = os.path.abspath(directory)
     break
 
+if WORKSPACE_DIRECTORY == '':
+    raise Exception('Workspace directory not found')
+
 MODEL_NAME: str = f'{WORKSPACE_DIRECTORY}/trained_model'
 
 __C_ROOT_PATH: str = f'{WORKSPACE_DIRECTORY}/../cpp_inference'
