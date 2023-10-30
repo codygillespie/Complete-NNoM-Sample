@@ -10,6 +10,11 @@ def save_headers(x_test, y_test) -> None:
 
         with open(TEST_DATA_HEADER_PATH, 'w+') as f:
             f.write(f'const int samples = {len(x_test)};\n')
+            
+            f.write(f'int results[{len(x_test)}] = {{\n')
+            f.write(','.join(['0' for x in x_test]))
+            f.write('\n};')
+
             f.write(f'const int size_per_sample = {INPUT_SIZE};\n')
             f.write(f'const int test_data[{len(x_test)}][{INPUT_SIZE}] = {{\n')
             f.write(',\n'.join(['{' + (','.join([f'{str(z)}' for z in x]) + '}') for x in x_test]))

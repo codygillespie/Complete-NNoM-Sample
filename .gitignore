@@ -9,3 +9,4 @@ workspace**
 /trained_model/**
 output.log
 /cpp_inference/cmake-build-debug**
+/cpp_inference/build/*
