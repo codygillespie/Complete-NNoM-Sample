@@ -36,7 +36,7 @@ def main():
     x_test = np.array([x['data'] for x in test])
     y_test = np.array([x['label'] for x in test])
 
-    model: Model = compile_model()
+    model: Model = compile_model(random_seed)
     model.fit(x_train, y_train, epochs=epochs, batch_size=32, validation_data=(x_test, y_test))
     model.summary()
     
