@@ -16,6 +16,7 @@ if WORKSPACE_DIRECTORY == '':
 MODEL_NAME: str = f'{WORKSPACE_DIRECTORY}/trained_model'
 
 C_RESULTS_PATH: str = f'{WORKSPACE_DIRECTORY}\\c'
+PY_RESULTS_PATH: str = f'{WORKSPACE_DIRECTORY}\\python'
 
 __C_ROOT_PATH: str = f'{WORKSPACE_DIRECTORY}/../cpp_inference'
 WEIGHTS_HEADER_PATH: str = f'{__C_ROOT_PATH}/weights.h'

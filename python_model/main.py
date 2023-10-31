@@ -9,6 +9,7 @@ from model import compile_model
 from constants import MODEL_NAME
 from headers import save_headers
 from data import ALL_DATA
+from evaluate import evaluate_model
 
 
 def main():
@@ -44,6 +45,9 @@ def main():
     loss, acc = model.evaluate(x_test, y_test)
     print(f'loss: {loss}, acc: {acc}')
     save_headers(x_test, y_test)
+    
+    # evaluation:
+    evaluate_model(x_test, y_test)
 
 
 if __name__ == "__main__":
