@@ -10,9 +10,12 @@ for directory in __directories:
     WORKSPACE_DIRECTORY = os.path.abspath(directory)
     break
 
+if WORKSPACE_DIRECTORY == '':
+    raise Exception('Workspace directory not found.')
+
 MODEL_NAME: str = f'{WORKSPACE_DIRECTORY}/trained_model'
 
-C_RESULTS_PATH: str = f'{WORKSPACE_DIRECTORY}/c'
+C_RESULTS_PATH: str = f'{WORKSPACE_DIRECTORY}\\c'
 if os.path.exists(C_RESULTS_PATH):
     os.remove(C_RESULTS_PATH)
 os.mkdir(C_RESULTS_PATH)
