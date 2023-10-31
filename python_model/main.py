@@ -32,7 +32,7 @@ def main():
     epochs: int = args.epochs
     
     train, test = train_test_split(ALL_DATA, train_size=split, random_state=random_seed)
-    x_train = np.array([x['data'] for x in train])
+    x_train = np.array([[v/128 for v in x['data']] for x in train])
     y_train = np.array([x['label'] for x in train])
     x_test = np.array([x['data'] for x in test])
     y_test = np.array([x['label'] for x in test])
